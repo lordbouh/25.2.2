@@ -1,4 +1,5 @@
 public class Zombie extends Monster {
+    private final int dhp = 5;
     //Fix this class
     public Zombie(String name, int i) {
         super(name + " the Zombie", 3);

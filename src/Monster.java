@@ -1,7 +1,7 @@
 public abstract class Monster {
     private String name;
     private int force;
-    private int hp = 100;
+    private int hp = 15;
     private boolean destroyed = false;
 
     public Monster(String name, int force) {
@@ -23,8 +23,8 @@ public abstract class Monster {
     }
 
     protected boolean damage(int dhp){
-        hp -= dhp;
-        if (hp < 0){
+          hp -= dhp;
+          if (hp < 0){
             destroyed = true;
             System.out.println("Monster " + name + " was destroyed");
             return true;
@@ -32,7 +32,8 @@ public abstract class Monster {
         return false;
     }
 
-  protected abstract void attack(Monster monster);
+    public abstract void attack(Monster monster);
 
     public abstract void attack();
+
 }
